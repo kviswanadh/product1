@@ -19,6 +19,7 @@ public class DepartmentController {
     @PostMapping("/departments")
     public Department saveDepartment(@RequestBody Department department)
     {
+        System.out.println("department is inserted");
         return departmentService.saveDepartment(department);
     }
 
