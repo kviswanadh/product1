@@ -32,6 +32,7 @@ public class DepartmentController {
     public Department updateDepartment(@RequestBody Department department,
                      @PathVariable("id") Long departmentId)
     {
+        System.out.println("department is updated");
         return departmentService.updateDepartment(
                 department, departmentId);
     }
