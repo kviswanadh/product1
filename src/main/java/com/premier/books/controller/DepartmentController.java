@@ -41,6 +41,7 @@ public class DepartmentController {
     public String deleteDepartmentById(@PathVariable("id")
                                        Long departmentId)
     {
+        System.out.println("department is deleted");
         departmentService.deleteDepartmentById(departmentId);
         return "Deleted Successfully";
     }
