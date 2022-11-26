@@ -1,11 +1,13 @@
 package com.premier.books.controller;
 
 import com.premier.books.model.Department;
+import com.premier.books.model.Employee;
 import com.premier.books.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -27,6 +29,12 @@ public class DepartmentController {
     {
         System.out.println("department is fetched");
         return departmentService.fetchDepartmentList();
+    }
+
+    @GetMapping("/Employees")
+    public List<Employee> fetchEmployeeList() {
+
+        return departmentService.fetchEmployeeList();
     }
 
     @PutMapping("/departments/{id}")
